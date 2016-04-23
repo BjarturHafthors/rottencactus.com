@@ -1,0 +1,88 @@
+img {
+	width: 200px;
+	height: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sonderLogo {
+	width: 500px;
+	padding: 25px;
+}
+
+#RCLogo {
+	width: 200px;
+}
+
+h3 {
+	margin-top: 40px;
+	border-top: #f73e6a solid 1px;
+    width: 200px;
+    position: relative;
+}
+
+h1, h2, #desc {
+	text-align: center;
+}
+
+header {
+	background-color: #f73e6a;
+	padding: 4px;
+	text-align: center;
+}
+
+footer {
+	border-top: black solid 1px;
+	margin: auto;
+	width: 15%;
+	padding: 4px;
+	text-align: center;
+}
+
+.mask {
+        position: absolute;
+        top:-1px;
+        left:1px;
+        width:50%;
+        height: 1px;
+        background-color:#fff;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+#translateButtons {
+	text-align: center;
+	height: 85px;
+	width: 180px;
+	margin: auto;
+}
+
+input {
+	border: none;
+}
+
+#ice {
+	float: left;
+	background: url("ice.ico");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 100%;
+}
+
+#eng {
+	background: url("eng.ico");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 100%;
+}
+
