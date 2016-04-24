@@ -37,7 +37,7 @@ h1, h2, #desc {
 
 header {
 	background-color: #f73e6a;
-	padding: 4px;
+	padding: 1%;
 	text-align: center;
 }
 
@@ -46,7 +46,7 @@ footer {
 	margin: auto;*/
 	position: absolute;
 	width: 100%;
-	padding: 4px;
+	padding: 0.5%;
 	text-align: center;
 	background-color: #f73e6a;
 }
