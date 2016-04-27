@@ -1,9 +1,18 @@
 body {
 	margin: 0px;
+	background-color: #D7DCDE;
 }
 
 h1, h2, h3, h4, p {
 	margin-left: 10px;
+}
+
+section {
+	margin-left: 20%;
+	margin-right: 20%;
+	background-color: white;
+	margin-bottom: 0;
+	border: 1px solid #D7DCDE;
 }
 
 img {
@@ -12,6 +21,10 @@ img {
 	display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#rottenCactusLogo {
+	width: 100%;
 }
 
 #sonderLogo {
@@ -24,15 +37,15 @@ img {
 	width: 200px;
 }
 
-h3 {
+h1, h5 {
+	text-align: center;
+}
+
+h2 {
 	margin-top: 40px;
 	border-top: #f73e6a solid 1px;
     width: 200px;
     position: relative;
-}
-
-h1, h2, #desc {
-	text-align: center;
 }
 
 header {
@@ -99,4 +112,8 @@ input {
 	background-repeat: no-repeat;
 	width: 50%;
 	height: 100%;
+}
+
+#adalheidurP {
+	margin-bottom: 0;
 }
