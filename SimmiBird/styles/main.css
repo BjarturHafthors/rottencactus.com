@@ -1,0 +1,334 @@
+/* website ====================================================== */
+
+body {
+	margin: 0px;
+	background-color: #E1EAED;
+}
+
+section {
+	height: 50%;
+}
+
+#RCLogo {
+	width: 200px;
+}
+
+header {
+	background-color: #f73e6a;
+	padding: 1%;
+	text-align: center;
+}
+
+footer > a {
+	color: black;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	padding-bottom: 0.5%;
+	padding-top: 0.5%;
+	text-align: center;
+	background-color: #f73e6a;
+	position:absolute; 
+	bottom:0;
+}
+
+/* Player ========================================================*/
+.Player {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 8em;
+	height: 8em;
+	background: transparent;
+
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.Character {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 8em;
+	height: 8em;
+	-webkit-animation: falling 0.5s linear 0s 1 normal forwards;
+	animation: falling 0.5s linear 0s 1 normal forwards;
+}
+
+@keyframes flapping {
+	0% {
+			-webkit-transform: rotateZ(0deg);
+			-webkit-transform-timing-function: linear;
+			transform: rotateZ(0deg);
+			transform-timing-function: linear;
+		}
+  
+    100% {
+    		-webkit-transform: rotateZ(-50deg);
+    		-webkit-transform-timing-function: linear;
+    		transform: rotateZ(-50deg);
+    		transform-timing-function: linear;
+    	}
+}
+
+@keyframes falling {
+	0% {
+			-webkit-transform: rotateZ(0deg);
+			-webkit-transform-timing-function: linear; 
+			transform: rotateZ(0deg);
+			transform-timing-function: linear;
+		}
+
+    100% {
+			-webkit-transform: rotateZ(90deg);
+			-webkit-transform-timing-function: linear;
+			transform: rotateZ(90deg);
+			transform-timing-function: linear; 
+		}
+}
+
+.Wings {
+	position: relative;
+	margin-top: 2em;
+	margin-left: 0em;
+    width: 2.5em;
+    height: 2em;
+    -webkit-animation: flap 0.1s linear 0s 0 normal;
+    animation: flap 0.1s linear 0s 0 normal;
+    z-index: 1;
+}
+
+@keyframes flap {
+	0% {
+			-webkit-transform: rotateY(0deg);
+			-webkit-transform-origin: 100% 50%;
+			-webkit-transform-timing-function: linear;
+			transform: rotateY(0deg);
+			transform-origin: 100% 50%;
+			transform-timing-function: linear;
+		}
+  
+    25% {
+    		-webkit-transform: rotateY(120deg);
+    		-webkit-transform-origin: 100% 50%;
+    		-webkit-transform-timing-function: linear;
+    		transform: rotateY(120deg);
+    		transform-origin: 100% 50%;
+    		transform-timing-function: linear;
+    	}
+
+    100% {
+			-webkit-transform: rotateY(0deg);
+			-webkit-transform-origin: 100% 50%;
+			-webkit-transform-timing-function: linear;
+			transform: rotateY(0deg);
+			transform-origin: 100% 50%;
+			transform-timing-function: linear; 
+		}
+}
+
+/* Background ========================================================*/
+
+.Background {
+	position: absolute;
+    background: url(../images/background4.png);
+    background-size: auto 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+
+    -webkit-transform: translateZ(0);
+	-webkit-animation: parallex 7s linear infinite;
+	transform: translateZ(0);
+	animation: parallex 7s linear infinite;
+}
+
+@keyframes parallex
+{
+    0%   {left: 0;}
+    100% {left: -106em;}
+}
+
+.Ground {
+	position: absolute;
+    background: url(../images/ruv.png);
+    background-color: white;
+    background-size: auto 100%;
+    left: 0;
+    bottom: 0;
+    height: 5em;
+    width: 300%;
+    border-top: 0.3em solid rgb(4,88,171);
+    z-index: 2;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /*
+    transform: rotate(1deg);
+    */
+	-webkit-animation: parallexGround 0.445s linear infinite;
+	animation: parallexGround 0.445s linear infinite;
+}
+
+@keyframes parallexGround
+{
+    0%   {left: 0;}
+    100% {left: -12em;}
+}
+
+/* Obstacle ========================================================*/
+
+.Obstacle {
+	position: absolute;
+	width: 12em;
+	height: 100%;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.upper {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 12em;
+	height: 50em;
+
+	background: url('../images/obs-background2.png') left bottom repeat-y;
+	background-size: 100% auto;
+}
+.lower {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 12em;
+	height: 50em;
+
+	background: url('../images/obs-background2.png') left top no-repeat, url('../images/obs-background2.png') 0em 37em no-repeat, url('../images/obs-background2.png') 0em 74em no-repeat;
+	background-size: 100% auto;
+}
+
+/* Mute and Play ========================================================*/
+
+#muteButton {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+
+	margin: 1em;
+	height: 4em;
+	width: auto;
+}
+
+.Play {
+	position: absolute;
+	left: 50%;
+	top: 20em;
+	height: 20em;
+	width: 40em;
+	margin-left: -20em;
+	box-sizing: border-box;
+	text-align: center;
+	-webkit-transform: translate(0, -29em);
+	transform: translate(0, -29em);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: -webkit-transform 0.5s;
+}
+
+.PlayButton {
+	margin-top: 2.5em;
+	font-size: inherit;
+	padding: 0.4em 1.5em;
+	border: 0.3em solid white;
+	background-color: #305A76;
+	cursor: pointer;
+}
+
+.PlayButtonText{
+	font-family: 'VT323';
+	font-size: 2.4em;
+	color: white;
+}
+
+.Play.is-visible {
+	-webkit-transform: none;
+	transform: none;
+}
+
+/* Scoreboard ========================================================*/
+
+.Scoreboard {
+	position: absolute;
+	left: 50%;
+	top: 20em;
+	height: 20em;
+	width: auto;
+	margin-left: -20em;
+	box-sizing: border-box;
+	text-align: center;
+	-webkit-transform: translate(0, -29em);
+	-webkit-transition: -webkit-transform 0.5s;
+	transform: translate(0, -29em);
+	transition: -webkit-transform 0.5s;
+	
+}
+
+.Both-scores {
+	font-family: 'VT323';
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 2.4em;
+    margin-top: 1em;
+    color: white;
+}
+
+.Scoreboard.is-visible {
+	-webkit-transform: none;
+	transform: none;
+}
+
+.Scoreboard-restart {
+	margin-top: 2.5em;
+	font-size: inherit;
+	padding: 0.4em 1.5em;
+	border: 0.3em solid white;
+	background-color: #305A76;
+	cursor: pointer;
+}
+
+.Scoreboard-restartText {
+	font-family: 'VT323';
+	font-size: 2.4em;
+	color: white;
+}
+
+body {
+	background: #E1EAED;
+}
+
+.GameCanvas {
+	font-size: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 102.4em;
+	height: 57.6em;
+	margin-left: -51.2em;
+	margin-top: -28.8em;
+	overflow: hidden;
+}
+
+.text {
+	width: auto;
+	text-align: center;
+}

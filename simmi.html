@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta property='og:image' content="www.rottencactus.com/images/preview.jpg" />
+
+        <meta property='og:description' content="Simmi Bird er magnaður leikur sem fjallar um Sigmund fugl þar sem hann er á flótta undan fjölmiðlum. Það endar að sjálfsögðu með því að hann segir af sér. Búinn til af Bjarti Hafþórssyni og Eyþóri Snæ Tryggvasyni." />
+
+        <meta property='og:url'content="http://www.rottencactus.com/" />
+
+        <meta property='og:title' content="Simmi Bird" />
+
+        <title>Simmi Bird!</title>
+
+        <meta name="description" content="Simmi Bird is a version of Flappy Bird where you play the Icelandic Prime Minister and have to avoid resigning.">
+        
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="shortcut icon" href="SimmiBird/images/simmi.jpg">
+        
+        <link href='https://fonts.googleapis.com/css?family=Bangers|VT323' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="SimmiBird/styles/main.css">
+        
+    </head>
+    <body>
+        
+        <header>
+            <img id="RCLogo" onclick="goToIndex()" align="middle" src="logo.png"/>
+        </header>
+
+        <section>
+            <h1 class="text"> Simmi Bird! </h1>
+            <p class="text"> Made by: Bjartur Hafþórsson & Eyþór Snær Tryggvason. 
+                We would like to note that we do not claim copyright to the pictures and background music used in the game. </p>
+        </section>
+
+        <div class="GameCanvas">
+            <div class="Background"></div>
+
+            <div class="Ground" id="ground"></div>
+
+            <div class="Player">
+                <img class="Character" src="SimmiBird/images/simmi2.png"/>
+                <img class="Wings" src="SimmiBird/images/fimmari.jpg"/>
+            </div>
+
+            <div class="GameAudio">
+                <audio id="backgroundAudio" controls loop autoplay hidden>
+                    <source src="SimmiBird/sound/background.mp3" type="audio/mpeg">
+                </audio> 
+                <img id="muteButton" src="SimmiBird/images/mute.png" onclick="mute()"/>
+            </div>
+            
+            <div class="Obstacle" id="obs1">
+                <div class="upper"></div>
+                <div class="lower"></div>
+            </div>
+
+            <div class="Obstacle" id="obs2">
+                <div class="upper"></div>
+                <div class="lower"></div>
+            </div>
+
+            <div class="Play">
+                <button class="PlayButton">
+                    <span class="PlayButtonText">Play!</span>
+                </button>
+            </div>
+
+            <div class="Scoreboard">
+                <button class="Scoreboard-restart">
+                    <span class="Scoreboard-restartText">Withdraw resignation</span>
+                </button>
+
+                <div class="Both-scores">
+                    <label class="Scoreboard-score-text">
+                        Days without resignation: <span id="Score"></span> 
+                    </label>
+                    <label class="Scoreboard-highscore-text">
+                        Highscore: <span id="Highscore"></span> 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="mailto:info@rottencactus.com">info@rottencactus.com</a>
+        </footer>
+
+        <script src="changePage.js"></script>
+        <script src="SimmiBird/bower_components/jquery/dist/jquery.js"></script>
+        <script src="SimmiBird/scripts/main.js"></script>
+        <script src="SimmiBird/scripts/controls.js"></script>
+        <script src="SimmiBird/scripts/game.js"></script>
+        <script src="SimmiBird/scripts/player.js"></script>
+        <script src="SimmiBird/scripts/utils.js"></script>
+        <script src="SimmiBird/scripts/obstacle.js"></script>
+        <script src="SimmiBird/scripts/audio.js"></script>
+</body>
+</html>

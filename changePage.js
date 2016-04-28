@@ -3,7 +3,7 @@ function goToSonder() {
 }
 
 function goToSimmiBird() {
-	document.location.href = "simmibird.html";
+	document.location.href = "simmi.html";
 }
 
 function goToIndex() {
